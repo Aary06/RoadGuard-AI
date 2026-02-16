@@ -2,9 +2,5 @@ streamlit==1.35.0
 ultralytics==8.2.0
 torch==2.2.2
 torchvision==0.17.2
-opencv-python-headless==4.9.0.80
 numpy==1.26.4
 matplotlib==3.8.4
-
-
-
