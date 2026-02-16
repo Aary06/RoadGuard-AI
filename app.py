@@ -22,7 +22,7 @@ if uploaded_file is not None:
         temp_path = tmp_file.name
 
     st.subheader("📷 Uploaded Image")
-    st.image(temp_path, use_container_width=True)
+    st.image(temp_path)
 
     st.subheader("🔍 Running Detection...")
     
@@ -36,7 +36,7 @@ if uploaded_file is not None:
     report = generate_report(score, condition, damage_count)
 
     st.subheader("📊 Detection Result")
-    st.image(annotated_image, use_container_width=True)
+    st.image(annotated_image)
 
     col1, col2 = st.columns(2)
 
@@ -51,4 +51,5 @@ if uploaded_file is not None:
 
 st.divider()
 st.caption("Developed by Aaryan | YOLOv8 | RDD2022 Dataset")
+
 
