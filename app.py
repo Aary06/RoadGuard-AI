@@ -1,4 +1,6 @@
 import streamlit as st
+import os
+os.environ["OPENCV_IO_ENABLE_OPENEXR"] = "1"
 from ultralytics import YOLO
 from severity_score import calculate_severity
 from report_generator import generate_report
@@ -49,3 +51,4 @@ if uploaded_file is not None:
 
 st.divider()
 st.caption("Developed by Aaryan | YOLOv8 | RDD2022 Dataset")
+
