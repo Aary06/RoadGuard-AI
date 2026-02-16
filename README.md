@@ -38,6 +38,29 @@ Manual road inspection is time-consuming and inefficient. This project automates
 - Recall: 0.513
 
 ---
+## 📷 Demo
+
+### Upload Interface
+![Upload](Assets/demo1.png)
+
+### Detection Output
+![Detection](Assets/demo2.png)
+
+### Final Inspection Report
+![Report](Assets/demo3.png)
+
+---
+
+
+## 👨‍💻 Developed By
+
+Aaryan Pandey  
+Microsoft Elevate AI Intern  
+Engineering Student | AI & IoT Enthusiast
+📫 Connect with me on LinkedIn:www.linkedin.com/in/aary06
+
+---
+
 
 ## ⚙️ How to Run
 
@@ -46,11 +69,4 @@ pip install -r requirements.txt
 streamlit run app.py
 
 
----
 
-## 👨‍💻 Developed By
-
-Aaryan Pandey  
-Microsoft Elevate AI Intern  
-Engineering Student | AI & IoT Enthusiast
-📫 Connect with me on LinkedIn: https://linkedin.com/in/aary06
