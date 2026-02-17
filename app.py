@@ -36,6 +36,10 @@ if uploaded_file is not None:
     results = model(temp_path, conf=confidence)
     end_time = time.time()
 
+    # DEBUG LINE
+    st.write("Raw Boxes:", results[0].boxes)
+
+
     annotated_image = results[0].plot()
     boxes = results[0].boxes
     damage_count = len(boxes)
@@ -99,3 +103,4 @@ if uploaded_file is not None:
 
 st.divider()
 st.caption("Developed by Aaryan | YOLOv8 | Deployed on Render")
+
