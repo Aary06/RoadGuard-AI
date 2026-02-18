@@ -1,4 +1,5 @@
 import streamlit as st
+from logger import log_inspection
 from ultralytics import YOLO
 from severity_score import calculate_severity
 from report_generator import generate_report
@@ -45,8 +46,9 @@ if uploaded_file is not None:
     damage_count = len(boxes)
 
     score, condition = calculate_severity(damage_count)
+    log_inspection(damage_count, score, condition, end_time - start_time)
     report = generate_report(score, condition, damage_count)
-
+    
     st.subheader("📊 Detection Result")
     st.image(annotated_image)
 
@@ -103,4 +105,5 @@ if uploaded_file is not None:
 
 st.divider()
 st.caption("Developed by Aaryan | YOLOv8 | Deployed on Render")
+
 
