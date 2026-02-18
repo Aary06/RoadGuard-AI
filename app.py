@@ -48,7 +48,8 @@ if uploaded_file is not None:
     boxes = results[0].boxes
     damage_count = len(boxes)
 
-    score, condition = calculate_severity(damage_count)
+    img_shape = results[0].orig_shape
+    score, condition = calculate_severity(boxes, model.names, img_shape)
     log_inspection(damage_count, score, condition, end_time - start_time)
     report = generate_report(score, condition, damage_count)
     
@@ -125,6 +126,7 @@ if os.path.exists("inspection_logs.csv"):
 
 else:
     st.info("No inspection history available yet.")
+
 
 
 
