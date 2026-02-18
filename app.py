@@ -7,6 +7,9 @@ import tempfile
 import time
 import matplotlib.pyplot as plt
 import numpy as np
+import os
+import pandas as pd
+
 
 st.set_page_config(page_title="RoadGuard AI v2", page_icon="🚀", layout="centered")
 
@@ -105,5 +108,23 @@ if uploaded_file is not None:
 
 st.divider()
 st.caption("Developed by Aaryan | YOLOv8 | Deployed on Render")
+
+
+st.divider()
+st.subheader("📊 Historical Inspection Analytics")
+
+if os.path.exists("inspection_logs.csv"):
+    df = pd.read_csv("inspection_logs.csv")
+
+    st.metric("Total Inspections", len(df))
+    st.metric("Average Road Health Score", round(df["Road Health Score"].mean(), 2))
+
+    condition_counts = df["Condition"].value_counts()
+
+    st.bar_chart(condition_counts)
+
+else:
+    st.info("No inspection history available yet.")
+
 
 
