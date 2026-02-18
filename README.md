@@ -1,10 +1,3 @@
-Excellent. Now your project is no longer a demo — it’s a deployed monitoring system.
-
-Here is a **professional, production-level README** tailored to your upgraded RoadGuard AI v2.
-
-You can copy-paste this directly into `README.md`.
-
----
 
 # 🚀 RoadGuard AI v2
 
@@ -158,4 +151,5 @@ Aaryan Pandey
 Microsoft Elevate AI Intern
 Computer Science Engineering Student
 Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal
+
 
