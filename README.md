@@ -48,13 +48,37 @@ RoadGuard AI v2 uses a custom-trained YOLOv8 model to:
 * Epochs: 60
 * Deployment: CPU inference (Render)
 
-### 📊 Performance Metrics (v1 baseline)
+ ---
 
-* mAP50: 0.542
-* Precision: 0.592
-* Recall: 0.513
+## 📊 Performance Metrics
 
-(v2 metrics will improve after extended training)
+### 🔹 v1 (Baseline – 15 Epochs, YOLOv8n)
+```
+mAP50: 0.542
+Precision: 0.592
+Recall: 0.513
+```
+
+### 🔹 v2 (Upgraded – 60 Epochs, YOLOv8s)
+```
+mAP50: 0.656
+mAP50-95: 0.370
+Precision: 0.661
+Recall: 0.617
+```
+### 🚀 Improvement Summary
+
+* 📈 +11.4% increase in mAP50
+* 📈 Better pothole detection (D40 mAP50: 0.778)
+* 📈 Improved recall → fewer missed damages
+* ⚡ Faster inference (~0.3s per image)
+
+### 🔍 Key Observations
+
+* Strong performance on pothole detection (D40).
+* Moderate improvement in thin crack detection.
+* Model optimized for real-world drone-based road imagery.
+* Balanced precision-recall tradeoff for infrastructure inspection.
 
 ---
 
@@ -147,9 +171,9 @@ streamlit run app.py
 
 ## 👨‍💻 Developed By
 
-Aaryan Pandey
-Microsoft Elevate AI Intern
-Computer Science Engineering Student
-Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal
+Aaryan Pandey | Microsoft Elevate Intern | Computer Science Engineering Student | Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal
+
+----
+
 
 
