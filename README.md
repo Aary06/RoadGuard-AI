@@ -50,6 +50,20 @@ RoadGuard AI v2 uses a custom-trained YOLOv8 model to:
 
  ---
 
+## ⚙️ Deployment Optimization
+
+Due to cloud memory constraints (Render free tier – 512MB RAM),
+the deployed version uses a lightweight YOLOv8n model for stable
+CPU-based inference.
+
+The high-accuracy YOLOv8s (60-epoch) model is retained locally
+for performance benchmarking and advanced evaluation.
+
+This demonstrates practical model optimization for real-world
+deployment environments.
+
+---
+
 ## 📊 Performance Metrics
 
 ### 🔹 v1 (Baseline – 15 Epochs, YOLOv8n)
